@@ -1,4 +1,4 @@
-package com.ylx.apiclientsdk;
+package com.ylx.apiclientsdk.config;
 
 import com.ylx.apiclientsdk.client.ApiClient;
 import lombok.Data;
@@ -18,4 +18,5 @@ public class ApiClientConfig {
     public ApiClient apiClient() {
         return new ApiClient(accessKey, secretKey);
     }
+    // TODO: 添加配置类其他配置，比如apiService的初始化Bean
 }

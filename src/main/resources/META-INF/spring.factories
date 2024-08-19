@@ -1,1 +1,1 @@
-org.springframework.boot.autoconfigure.EnableAutoConfiguration=com.ylx.apiclientsdk.ApiClientConfig
+org.springframework.boot.autoconfigure.EnableAutoConfiguration=com.ylx.apiclientsdk.config.ApiClientConfig
