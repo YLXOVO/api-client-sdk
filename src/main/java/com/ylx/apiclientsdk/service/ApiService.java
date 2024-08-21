@@ -3,6 +3,7 @@ package com.ylx.apiclientsdk.service;
 import com.ylx.apiclientsdk.client.ApiClient;
 import com.ylx.apiclientsdk.exception.ApiException;
 import com.ylx.apiclientsdk.model.request.BaseRequest;
+import com.ylx.apiclientsdk.model.request.IpInfoRequest;
 import com.ylx.apiclientsdk.model.response.ResultResponse;
 
 /**
@@ -35,5 +36,29 @@ public interface ApiService {
      * @throws ApiException 如果请求处理过程中发生了异常。
      */
     <O,T extends ResultResponse> T requestWithClient(ApiClient apiClient, BaseRequest<O, T> request) throws ApiException;
+
+    /**
+     * 通过指定的ApiClient获取IP信息
+     * 此方法允许通过特定的ApiClient实例发送IpInfoRequest，以获取IP信息
+     * 主要用于 situations where a specific apiClient instance needs to be used
+     *
+     * @param apiClient ApiClient实例，用于发送API请求
+     * @param request IpInfoRequest对象，包含获取IP信息所需的参数
+     * @return ResultResponse对象，包含IP信息查询结果
+     * @throws ApiException 如果API调用出现错误
+     */
+    ResultResponse getIpInfoWithClient(ApiClient apiClient, IpInfoRequest request) throws ApiException;
+
+
+    /**
+     * 直接通过默认ApiClient获取IP信息
+     * 此方法使用默认的ApiClient实例发送IpInfoRequest，适用于大多数情况
+     * 主要用于 situations where the default apiClient can be used
+     *
+     * @param request IpInfoRequest对象，包含获取IP信息所需的参数
+     * @return ResultResponse对象，包含IP信息查询结果
+     * @throws ApiException 如果API调用出现错误
+     */
+    ResultResponse getIpInfo(IpInfoRequest request) throws ApiException;
 }
 

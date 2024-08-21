@@ -4,7 +4,7 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>com.ylx</groupId>
     <artifactId>api-client-sdk</artifactId>
-    <version>0.0.1</version>
+    <version>0.0.2</version>
     <name>api-client-sdk</name>
     <description>api-client-sdk</description>
     <properties>
